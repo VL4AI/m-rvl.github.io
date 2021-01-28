@@ -1,0 +1,95 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+
+{% include collapse.html %}
+{% include _head.html %}
+
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #f44336;} /* Red */ 
+.button_Gray {background-color: #e7e7e7; color: black;} /* Gray */ 
+.button_white {background-color: white; color: black;} /* White */ 
+.button5 {background-color: #555555;} /* Black */
+</style>
+
+</head>
+
+<body class="post-index">
+
+{% include _browser-upgrade.html %}
+{% include _navigation.html %}
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    {% include _author-bio.html %}
+  </div>
+  <div id="index">
+    <h1>{{ page.title }}</h1>
+    {% capture written_year %}'None'{% endcapture %}
+    {% for post in site.categories.blog %}  
+      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+      {% if year != written_year %}
+        <h3>{{ year }}</h3>
+        {% capture written_year %}{{ year }}{% endcapture %}
+      {% endif %}
+      <article>
+        {% if post.link %}
+          <h2 class="link-post"><a href="{{ site.github.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h2>
+        {% else %}
+			{% if post.project_link == true %}
+				<h2><a href="{{ site.github.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+			{% else %}
+				<h2 style="color:black;"> {{ post.title }} </h2>
+			{% endif %}
+			
+			<p>{{ post.author | strip_html |truncate: 160 }} </br>
+		
+		{% if post.paper_link %}
+				
+				<a href="{{post.paper_link}}"><button class="button_Gray">PDF</button></a>
+		{% endif %}
+		
+		{% if post.code_link %}
+			<a href="{{post.code_link}}"><button class="button_Gray">CODE</button></a>
+		{% endif %}
+		
+		{% if post.video_link %}
+			<a href="{{post.video_link}}"><button class="button_Gray">VIDEO</button></a>
+		{% endif %}
+		
+		{% if post.slide_link %}
+			<a href="{{post.slide_link}}"><button class="button_Gray">SLIDE</button></a>
+		{% endif %}
+		
+		{% if post.bibtex_link %}		
+			<a href="{{post.bibtex_link}}"><button class="button_Gray">BIBTEX</button></a>
+			
+		{% endif %}
+		 </p>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </div><!-- /#index -->
+</div><!-- /#main -->
+
+{% include _scripts.html %}
+
+</body>
+</html>

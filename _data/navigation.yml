@@ -1,0 +1,18 @@
+# Site navigation links
+- title: Home
+  url: /
+
+- title: Research
+  url: /research/
+  
+- title: Publications
+  url: /publications/
+
+- title: Team
+  url: /team/
+  
+- title: Positions
+  url: /positions/
+  
+- title: Contact
+  url: /contact/
