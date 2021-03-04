@@ -8,6 +8,14 @@
 {% include collapse.html %}
 {% include _head.html %}
 
+
+<script>
+function myFunction(a) {
+  var myWindow = window.open("", "myWindow", "width=200,height=100");
+  myWindow.document.write(a);
+}
+</script>
+
 <style>
 .button {
   background-color: #4CAF50; /* Green */
@@ -27,6 +35,12 @@
 .button_Gray {background-color: #e7e7e7; color: black;} /* Gray */ 
 .button_white {background-color: white; color: black;} /* White */ 
 .button5 {background-color: #555555;} /* Black */
+</style>
+
+<style>
+p.small {
+  line-height: 0.2;
+}
 </style>
 
 </head>
@@ -54,15 +68,17 @@
           <h2 class="link-post"><a href="{{ site.github.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h2>
         {% else %}
 			{% if post.project_link == true %}
-				<h2><a href="{{ site.github.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+				<span><h2><a href="{{ site.github.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2></span>
 			{% else %}
-				<h2 style="color:black;"> {{ post.title }} </h2>
+				<span><h2 style="color:black;"> {{ post.title }} </h2></span>
 			{% endif %}
 			
-			<p>{{ post.author | strip_html |truncate: 160 }} </br>
+			<span><i><h2 style="color:blue;font-size:15px"> {{ post.publisher }}</h2></i></span>
+			<span>{{ post.author | strip_html |truncate: 160 }}</span></br>
+			<button onclick="myFunction(post.publisher)">BIBTEX</button>
+			
 		
 		{% if post.paper_link %}
-				
 				<a href="{{post.paper_link}}"><button class="button_Gray">PDF</button></a>
 		{% endif %}
 		

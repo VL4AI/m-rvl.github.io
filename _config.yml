@@ -1,12 +1,12 @@
 # Site wide configuration
 
-title: Monash Robotics, Vision Learning(RVL) Lab
+title: Monash Robotics, Vision Learning (RVL) Lab
 locale: en_US
 logo: # filename of a logo image that has been placed into your images directory
 
 # Enter the following platform usernames if you would like for them to appear on your site.
 owner:
-  name: Monash Robotics, Vision Learning(RVL) Lab
+  name: Monash Robotics, Vision Learning (RVL) Lab
   avatar: bio-photo.jpg
   bio: "To undrestand what see"
   email: mrvl@monash.edu #emailaddress
