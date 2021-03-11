@@ -2,6 +2,7 @@
 layout: pub
 title: Multi-target tracking with time-varying clutter rate and detection profile. Application to time-lapse cell microscopy sequences
 author: Rezatofighi, Seyed Hamid and Gould, Stephen and Vo, Ba Tuong and Vo, Ba-Ngu and Mele, Katarina and Hartley, Richard
+publisher: IEEE Transactions on Medical Imaging
 paper_link: https://arxiv.org/pdf/1507.06397.pdf
 year: 2015
 comments: true

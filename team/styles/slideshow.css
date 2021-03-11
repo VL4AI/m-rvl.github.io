@@ -1,0 +1,234 @@
+/*
+*
+*
+*	advertise image
+*
+*/
+
+/*	Structure
+-------------------------------------------------------------- */
+
+#header-images{
+	display: block;
+	float: left;
+	position: relative;
+	z-index: 2; /* under primary menu but over content wrapper (z-index=1) */
+	width: 100%;
+	height: 320px; /* image image height */
+	
+}
+	
+#header-images.unlimited{
+	height: 250px; /* advertise region with sull height*/
+}
+
+img.slide{
+	width: 100%;
+	height: 320px; /* image image height */
+
+}
+
+#header-image-text{ /* image text container */
+
+bottom: 0px;
+left: 10px;
+z-index: 109;
+width: 100%;
+}
+
+#header-image-text-data{ /* image text data */
+	padding: 15px 20px 15px 20px;
+	margin-right: 70px; /* stay away form navigation */
+}
+
+#header-image-navigation{ /* image navigation */
+	position: absolute;
+	z-index: 110;
+	bottom: 10px;
+	right: 10px;
+	width: 60px;
+}
+
+#header-image-title{ /* image title */
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+#header-image-description{ /* image description */
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+#header-image-navigation a{ /*image navigation links */
+	float: left;
+	width: 1em;
+	height: 1em;
+	line-height: 0.85em;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+
+#header-image-navigation a#header-image-prev,
+#header-image-navigation a#header-image-next{ /*image navigation links */
+	text-indent: 0.35em;
+}
+
+/*	Look & Feel
+-------------------------------------------------------------- */
+
+#header-images{ /* advertise image */
+	color: white;
+	background:#054b81;
+}
+
+#header-image-text{
+	background: black; /* for older browsers */
+	position:absolute;
+}
+
+#header-image-title{ /* image title font style */
+	font-size: 2.6em;
+	font-weight: bold;
+}
+
+#header-image-description{ /* image description */
+	font-size: 1em;
+	font-style: italic;
+	color:#898989;
+}
+
+#header-image-title,
+#header-image-title a{ /* image title link color */
+	color:#d7d7d7;
+}
+
+#header-image-description a{ /* image description link colorl*/
+	color:#898989;
+}
+
+#header-image-title a:hover,
+#header-image-description a:hover{
+	text-decoration: none;
+}
+
+#header-image-description a:hover{
+	color:#898989;
+}
+
+a#header-image-prev,
+a#header-image-next{
+	font-family:arial;
+	font-weight: lighter;
+	font-size: 1.8em;
+	color:#fff;
+	background: #444444;
+}
+	
+a#header-image-prev:hover,
+a#header-image-next:hover{
+	background: #f97e05;
+	text-decoration: none;
+}
+.views-slideshow-controls-bottom .views-slideshow-pager-field-item { float: left; margin: 20px 6px; }
+
+.slideshow_text_wrapper{
+	right:80px;
+	top: 50px;
+	width:350px;
+	position:absolute;
+	line-height: 1.3em;
+}
+.slideshow_text_wrapper p{
+	line-height: 1.3em;
+}
+.slideshowbanner{
+	width:100%;
+	margin-left:100px;
+	margin-top:10px;
+	vertical-align:center;
+	height:100%;
+}
+
+.slideshowbanner img{
+	vertical-align:middle;	
+}
+
+.slide_wrapper{
+  width:958px;
+  color:#202020;
+  height:250px;
+}
+
+#views_slideshow_controls_text_Featured_Slider-block{
+  width:100%;
+  height:0px;
+  position:absolute;
+  top:120px;
+  color:transparent;
+}
+
+#views_slideshow_controls_text_previous_Featured_Slider-block{
+  background:url('../../../sites/default/files/images/back.png');
+  left:0px;
+  background-size:30px 30px;
+  width:30px;
+  height:30px;
+  position:absolute;
+  overflow:hidden;
+z-index:20;
+
+}
+
+#views_slideshow_controls_text_pause_Featured_Slider-block{
+display:none;
+
+}
+
+#views_slideshow_controls_text_next_Featured_Slider-block{
+
+ background:url('../../../sites/default/files/images/next.png');
+ background-size:30px 30px;
+ right:0px;
+ width:30px;
+ height:30px;
+ position:absolute;
+ overflow:hidden;
+ z-index:20;
+
+}
+
+#views_slideshow_controls_text_next_Featured_Slider-block:hover{
+
+ background:url('../../../sites/default/files/images/next_on.png');
+ background-size:30px 30px;
+
+}
+#views_slideshow_controls_text_previous_Featured_Slider-block:hover{
+background:url('../../../sites/default/files/images/back_on.png');
+background-size:30px 30px;
+}
+
+#views_slideshow_cycle_teaser_section_Featured_Slider-block{
+  margin-left:auto;
+  margin-right:auto;
+	color:inherit;
+  
+}
+#views_slideshow_cycle_main_Featured_Slider-block{
+ background:url("../../../sites/default/files/images/bg-gallery.gif");
+ background-size:958px 350px;
+ width:958px;
+ height:250px;
+ overflow:hidden;
+}
+.slide_details{
+background:url('../img/backgrounds/details.png');
+
+padding-top:30px;
+padding-left:80px;
+}
+.slide_details:hover{
+text-shadow: 0px 0px 5px #FFFFFF;
+}
+
+
