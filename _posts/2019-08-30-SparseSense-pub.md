@@ -4,6 +4,7 @@ title: SparseSense-Human Activity Recognition from Highly Sparse Sensor Data-str
 author: Alireza Abedin, S Hamid Rezatofighi, Qinfeng Shi, Damith C Ranasinghe
 year: 2019
 paper_link: https://arxiv.org/pdf/1906.02399.pdf
+paper_photo: 1906.02399.jpg
 publisher: International Joint Conference on Artificial Intelligence (IJCAI19)
 comments: true
 category: blog

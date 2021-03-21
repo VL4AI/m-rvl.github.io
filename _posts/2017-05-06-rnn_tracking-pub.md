@@ -2,7 +2,8 @@
 layout: pub
 title: Online multi-target tracking using recurrent neural networks
 author: Anton Milan, Seyed Hamid Rezatofighi, Anthony Dick, Ian Reid, Konrad Schindler.
-paper_link: https://arxiv.org/pdf/2012.12990.pdf
+paper_link: https://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/viewFile/14184/14304
+paper_photo: 14184-66788-1-PB.jpg
 publisher: Thirty-First AAAI Conference on Artificial Intelligence (AAAI17)
 year: 2017
 comments: true

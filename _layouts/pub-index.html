@@ -2,110 +2,222 @@
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
 <head>
 
-{% include collapse.html %}
-{% include _head.html %}
+  {% include collapse.html %}
+  {% include _head.html %}
 
 
-<script>
-function myFunction(a) {
-  var myWindow = window.open("", "myWindow", "width=200,height=100");
-  myWindow.document.write(a);
+  <script>
+    function myFunction(a) {
+      var myWindow = window.open("", "myWindow", "width=200,height=100");
+      myWindow.document.write(a);
+    }
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Create two unequal columns that floats next to each other */
+    .column {
+      float: left;
+      padding: 10px;
+      height: 300px;
+      /* Should be removed. Only for demonstration */
+    }
+
+    .left {
+      width: 25%;
+    }
+
+    .right {
+      width: 75%;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+
+  <style>
+    hr {
+      display: blue;
+      height: 2px;
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 1em 0;
+      padding: 0;
+    }
+  </style>
+
+
+  <style>
+    .button {
+      background-color: #4CAF50;
+      /* Green */
+      border: none;
+      color: white;
+      padding: 4px 8px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 12px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .button2 {
+      background-color: #008CBA;
+    }
+
+    /* Blue */
+    .button3 {
+      background-color: #f44336;
+    }
+
+    /* Red */
+    .button_Gray {
+      background-color: #e7e7e7;
+      color: black;
+    }
+
+    /* Gray */
+    .button_white {
+      background-color: white;
+      color: black;
+    }
+
+    /* White */
+    .button5 {
+      background-color: #555555;
+    }
+
+    /* Black */
+  </style>
+
+  <style>
+    img {
+      float: left;
+    }
+  </style>
+
+  <style>
+    ht {
+      text-shadow: 0 0 2px #FF0000;
+    }
+
+  </style>
+
+
+  <!-- <style>
+  img{
+  border-radius: 10px;
+  margin-top:15px;
+  margin-left:1px;
+  margin-right:15px;
+  box-shadow: 10px 10px 5px #ccc;
+  -moz-border-radius:25px;
+  -webkit-border-radius:25px;
+  border-radius:25px;
 }
-</script>
+</style> -->
+  <style>
+    p.small {
+      line-height: 0.2;
+    }
+  </style>
 
-<style>
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 4px 8px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-.button2 {background-color: #008CBA;} /* Blue */
-.button3 {background-color: #f44336;} /* Red */ 
-.button_Gray {background-color: #e7e7e7; color: black;} /* Gray */ 
-.button_white {background-color: white; color: black;} /* White */ 
-.button5 {background-color: #555555;} /* Black */
-</style>
-
-<style>
-p.small {
-  line-height: 0.2;
-}
-</style>
-
+  <style type="text/css" media="all">
+    @import "styles/typography.css?q0ksq3";
+  </style>
 </head>
 
 <body class="post-index">
 
-{% include _browser-upgrade.html %}
-{% include _navigation.html %}
+  {% include _browser-upgrade.html %}
+  {% include _navigation.html %}
 
-<div id="main" role="main">
-  <div class="article-author-side">
-    {% include _author-bio.html %}
-  </div>
-  <div id="index">
-    <h1>{{ page.title }}</h1>
-    {% capture written_year %}'None'{% endcapture %}
-    {% for post in site.categories.blog %}  
+  <div id="main" role="main">
+    <!-- <div class="row"> -->
+    <div class="article-author-side">
+      <!-- <div class="column left"> -->
+      {% include _author-bio.html %}
+    </div>
+
+    <div class="column right" id="index">
+      <!-- <div id="index"> -->
+      <h1>{{ page.title }}</h1>
+      {% capture written_year %}'None'{% endcapture %}
+      {% for post in site.categories.blog %}
       {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
       {% if year != written_year %}
-        <h3>{{ year }}</h3>
-        {% capture written_year %}{{ year }}{% endcapture %}
+      <br>
+      <h3>{{ year }}</h3>
+      {% capture written_year %}{{ year }}{% endcapture %}
       {% endif %}
       <article>
         {% if post.link %}
-          <h2 class="link-post"><a href="{{ site.github.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h2>
+        <h2 class="link-post"><a href="{{ site.github.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title
+            }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a>
+        </h2>
         {% else %}
-			{% if post.project_link == true %}
-				<span><h2><a href="{{ site.github.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2></span>
-			{% else %}
-				<span><h2 style="color:black;"> {{ post.title }} </h2></span>
-			{% endif %}
-			
-			<span><i><h2 style="color:blue;font-size:15px"> {{ post.publisher }}</h2></i></span>
-			<span>{{ post.author | strip_html |truncate: 160 }}</span></br>
-			<button onclick="myFunction(post.publisher)">BIBTEX</button>
-			
-		
-		{% if post.paper_link %}
-				<a href="{{post.paper_link}}"><button class="button_Gray">PDF</button></a>
-		{% endif %}
-		
-		{% if post.code_link %}
-			<a href="{{post.code_link}}"><button class="button_Gray">CODE</button></a>
-		{% endif %}
-		
-		{% if post.video_link %}
-			<a href="{{post.video_link}}"><button class="button_Gray">VIDEO</button></a>
-		{% endif %}
-		
-		{% if post.slide_link %}
-			<a href="{{post.slide_link}}"><button class="button_Gray">SLIDE</button></a>
-		{% endif %}
-		
-		{% if post.bibtex_link %}		
-			<a href="{{post.bibtex_link}}"><button class="button_Gray">BIBTEX</button></a>
-			
-		{% endif %}
-		 </p>
+        <p><img src="{{post.paper_photo}}" alt="" style="width:100px;height:125px;border-radius: 10px;
+      margin-top:15px; margin-left:1px; margin-right:15px; box-shadow: 10px 10px 5px #ccc;
+       -moz-border-radius:25px; -webkit-border-radius:25px; border-radius:25px;">
+          <hr style="opacity:0">
+          <!-- <span><h2 style="color:black;"> {{ post.title }} </h2></span> -->
+          <span>
+            <ht style="color:black;font-size:20px"> {{ post.title }}</ht>
+          </span><br>
+          <span>
+            <hp style="color:blue;font-size:15px"> {{ post.publisher }}</hp>
+          </span><br>
+          <span>{{ post.author | strip_html |truncate: 160 }}</span><br>
+          <!-- <button onclick="myFunction(post.publisher)">BIBTEX</button> -->
+
+          {% if post.project_link %}
+          [<a href="{{ site.github.url }}{{ post.url }}" style="color:red;">PROJECT</a>]
+          {% endif %}
+
+          {% if post.code_link %}
+          [<a href="{{post.code_link}}" style="color:red;">CODE</a>]
+          {% endif %}
+
+          {% if post.video_link %}
+          [<a href="{{post.video_link}}" style="color:red;">VIDEO</a>]
+          {% endif %}
+
+          {% if post.slide_link %}
+          [<a href="{{post.slide_link}}" style="color:red;">SLIDE</a>]
+          {% endif %}
+
+          {% if post.bibtex %}
+          [<a href="{{post.bibtex}}" style="color:red;">BIBTEX</a>]
+          {% endif %}
+
+          {% if post.paper_link %}
+          [<a href="{{post.paper_link}}" style="color:red;">PDF</a>]<br>
+          {% endif %}
+
+        </p>
         {% endif %}
       </article>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div><!-- /#index -->
-</div><!-- /#main -->
+  </div><!-- /#main -->
 
-{% include _scripts.html %}
+  {% include _scripts.html %}
 
 </body>
+
 </html>

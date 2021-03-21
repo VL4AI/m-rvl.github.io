@@ -3,9 +3,10 @@ layout: pub
 title: Socially and contextually aware human motion and pose forecasting
 author: Adeli, Vida and Adeli, Ehsan and Reid, Ian and Niebles, Juan Carlos and Rezatofighi, Hamid
 publisher: IEEE Robotics and Automation Letters (RA-L) & International Conference on Intelligent Robots and Systems (IROS20)
-paper_link: https://arxiv.org/pdf/2007.06843
+paper_link: https://arxiv.org/pdf/2007.06843.pdf
 video_link: https://www.youtube.com/watch?v=sTBNdBco1Yo
 project_link: true
+paper_photo: 2007.06843.jpg
 year: 2020
 comments: true
 category: blog
